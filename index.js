@@ -34,8 +34,8 @@ function init(){
 inquirer
     .prompt(settings)
     .then((answers)=>{
-        const readMeContent = generateReadMe(answers);
-        fs.writeFile('logo.svg', readMeContent, (err) =>
+        const logoContent = generateLogo(answers);
+        fs.writeFile('logo.svg', logoContent, (err) =>
         err ? console.log(err) : console.log('Generated logo.svg')
         );
     })
